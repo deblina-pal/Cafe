@@ -1,0 +1,304 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.navbar a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    /* transition: background-color 0.5s ease-in-out; */
+}
+
+.navbar a:hover {
+    background: #444;
+    color: #f1ca97;
+    transition: 0.5s ease-in-out;
+}
+
+.menu {
+    font-size: 20px;
+}
+
+.menu .icon {
+    display: none;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1ca97;
+}
+
+.intro {
+    background: url("./images/sushi_restrurant.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: bolder;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.intro p {
+    font-size: 2.2rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.intro button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #333;
+    background: #f1ca97;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.intro button:hover {
+    background: #ddd;
+    /* transition: 0.5s ease-in-out; */
+    transform: translateY(-10px);
+}
+
+.content {
+    padding: 2rem;
+}
+
+/* About Section Styles */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #ebe5e5;
+    height: 100vh;
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-text {
+    flex-basis: 50%;
+}
+
+.about-text h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 650;
+    transition: transform 0.3s;
+}
+
+.about-text h2:hover {
+    color: #f75205;
+    transform: translateY(-10px);
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.about-image {
+    flex-basis: 40%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .google-maps {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-maps iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+} */
+
+/* Location Section Styles */
+#location {
+    padding: 50px;
+    background-color: #f1e2cd;
+}
+
+.location-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.location-wrapper h1 {
+    color: #333;
+    padding-top: 0.5rem;
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    transition: transform 0.3s;
+}
+
+.location-wrapper h1:hover {
+    color: #f75205;
+    transform: translateY(-10px);
+}
+
+.location-wrapper p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.location-wrapper iframe {
+    max-width: 100%;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background: url("./images/contactbg.jpg") no-repeat fixed top;
+    background-size: cover;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f1ca97;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.contact-info,
+.opening-hours {
+    width: 45%;
+}
+
+.contact-info h2,
+.opening-hours h2 {
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.contact-info h2:hover {
+    color: #ddd;
+    transform: translateY(-10px);
+}
+
+.opening-hours h2:hover {
+    color: #ddd;
+    transform: translateY(-10px);
+}
+
+.contact-info p,
+.opening-hours p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .intro,
+    #about,
+    .contact-section {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .about-wrapper,
+    .contact-info,
+    .opening-hours {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .location {
+        height: 100vh;
+    }
+    .location-wrapper h1 {
+        padding-top: 2rem;
+    }
+    .about-wrapper h2 {
+        padding-top: 3.5rem;
+    }
+
+    .menu a:not(:first-child) {
+        display: none;
+    }
+    .navbar a {
+        padding: 1px 16px;
+    }
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+
+    .menu.responsive {
+        position: relative;
+    }
+
+    .menu.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
